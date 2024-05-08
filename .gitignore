@@ -1,0 +1,13 @@
+.env
+db.sqlite3
+*.pyc
+*.Scripts
+*.db
+*.sqlite3
+*.pyc
+Scripts
+*Scripts
+Lib
+Include
+tcl
+pyvenv.cfg
