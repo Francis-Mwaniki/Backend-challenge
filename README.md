@@ -41,7 +41,7 @@ The Order Management System is a Django-based web application that allows users 
 
 ## Features
 
-- User authentication and authorization using Auth0
+- User authentication and authorization using Auth0 via OPENID Connect
 - Create new orders with customer details, item, and amount
 - View order details
 - Delete existing orders
