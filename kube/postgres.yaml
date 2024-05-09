@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: postgres
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: postgres
+  template:
+    metadata:
+      labels:
+        app: postgres
+    spec:
+      volumes:
+      - name: storage
+        persistentVolumeClaim:
+          claimName: postgres-storage
+      containers:
+      - name: postgres
+        image: postgres:13
+        ports:
+        - containerPort: 5432
+        volumeMounts:
+        - name: storage
+          mountPath: /var/lib/postgresql/data
+        envFrom:
+        - secretRef:
+            name: order-management-secrets
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: postgres
+spec:
+  selector:
+    app: postgres
+  ports:
+  - port: 5432

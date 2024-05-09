@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: order-management-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: order-management-app
+  template:
+    metadata:
+      labels:
+        app: order-management-app
+    spec:
+      containers:
+      - name: order-management-app
+        image: your-dockerhub-username/order-management-system:latest
+        ports:
+        - containerPort: 3000
+        envFrom:
+        - secretRef:
+            name: order-management-secrets
+        volumeMounts:
+        - name: config
+          mountPath: /app/config
+      volumes:
+      - name: config
+        emptyDir: {}
