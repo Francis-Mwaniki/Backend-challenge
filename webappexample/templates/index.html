@@ -140,6 +140,36 @@
       }
 
 
+      .delete-btn {
+          background-color: #dc3545;
+          color: #fff;
+          padding: 5px 10px;
+          border-radius: 3px;
+          text-decoration: none;
+          transition: background-color 0.3s ease;
+      }
+      .delete-btn:hover {
+          background-color: #c82333;
+      }
+      .order-li {
+          display: flex;
+          justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            color: #fff;
+
+      }
+      .order-li a {
+          color: #fff;
+          text-decoration: none;
+      }
+      .order{
+            display: flex;
+            justify-content: space-between;
+      }
     </style>
 </head>
 <body>
@@ -150,7 +180,7 @@
     </header>
     <nav>
         {% if session %}
-            <a href="#">User Settings</a>
+            <a href="#">Home</a>
             {% comment %} create order  {% endcomment %}
             <a href="{% url 'create_order' %}">Create Order</a>
             <a href="{% url 'logout' %}" id="qsLogoutBtn">Logout</a>
@@ -187,9 +217,18 @@
               <h2>Customer: {{ customer.name }} ({{ customer.code }})</h2>
               {% if orders %}
                   <h3>Orders:</h3>
-                  <ul>
+                  <ul class="orders">
                       {% for order in orders %}
-                          <li>{{ order.item }} - ${{ order.amount }} ({{ order.time }})</li>
+                          <li class="order-li">
+                            {{ order.item }} - ${{ order.amount }} created on {{ order.time}}
+                            {% comment %} - IF phoneNumber from customer object{% endcomment %}
+                            {% if customer.phoneNumber %}
+                                {{ customer.phoneNumber }}
+                            {% endif %}
+                            
+                            <a href="{% url 'delete_order' order.id %}" class="delete-btn">Delete</a>
+                        </li>
+                          {% comment %} delete order {% endcomment %}
                       {% endfor %}
                   </ul>
               {% else %}

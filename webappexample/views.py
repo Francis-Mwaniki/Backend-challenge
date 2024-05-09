@@ -25,7 +25,10 @@ def index(request):
     orders = None
     if request.session.get("user"):
         email = request.session.get("user").get("userinfo", {}).get("email")
+        # print(f'phone number: {request.session.get("user").get("userinfo", {}).get("phone_number")}')
+        
         customer, _ = Customer.objects.get_or_create(name=email, defaults={"code": generate_unique_code()})
+        all_customers_phone_numbers = Customer.objects.values_list('phoneNumber', flat=True)
         orders = Order.objects.filter(customer=customer)
 
     return render(
