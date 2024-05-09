@@ -1,9 +1,28 @@
-Sure, here's a professional documentation including information about running tests, Docker, and Kubernetes deployment:
-
 # Order Management System
 
 The Order Management System is a Django-based web application that allows users to create, view, and delete orders. It also includes functionality to send SMS notifications to customers when an order is created, using the AfricasTalking API. The application is designed to be containerized with Docker and can be deployed using Kubernetes.
 
+# Demo
+ <h2>Home Page</h2>
+<p align="center">
+  <img src="./public/home.png" alt="Home Page" width="600">
+</p>
+     <h2>Login Page</h2>
+<p align="center" >
+  <img src="./public/auth.png" alt="Login Page" width="600">
+</p>
+     <h2>Create Order Page</h2>
+<p align="center">
+    <img src="./public/create_order.png" alt="Create Order Page" width="600">
+</p>
+     <h2>Order Details Page</h2>
+<p align="center">
+    <img src="./public/order_details.png" alt="Order Details Page" width="600">
+</p>
+     <h2>Order Deletion</h2>
+<p align="center">
+    <img src="./public/delete.png" alt="Order Deletion" width="600">
+</p>
 ## Table of Contents
 
 - [Features](#features)
@@ -46,7 +65,7 @@ Before running the project, ensure that you have the following installed:
 1. Clone the repository:
 
 ```
-git clone https://github.com/your-username/order-management-system.git
+git clone git@github.com:Francis-Mwaniki/order-management-system.git
 ```
 
 2. Navigate to the project directory:
