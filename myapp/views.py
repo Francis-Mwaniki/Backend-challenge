@@ -90,7 +90,7 @@ def send_sms(message, recipients):
 # def send_sms(message, recipients):
 #     """Send SMS notification using AfricasTalking API"""
 #     username = "sandbox"  # Use "sandbox" for development in the test environment
-#     api_key = "99c356dbdb8ab316795723f448a9c82121d8699fb52335d557a1ece6988fe1e5"
+#     api_key = ""
 #     url = "https://api.sandbox.africastalking.com/version1/messaging"
 #     headers = {
 #         "ApiKey": api_key,
