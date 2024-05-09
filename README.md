@@ -41,7 +41,7 @@ The Order Management System is a Django-based web application that allows users 
 
 ## Features
 
-- User authentication and authorization using Auth0
+- User authentication and authorization using Auth0 via OPENID Connect
 - Create new orders with customer details, item, and amount
 - View order details
 - Delete existing orders
@@ -101,10 +101,10 @@ python manage.py migrate
 6. Start the development server:
 
 ```
-python manage.py runserver
+python manage.py runserver 3000
 ```
 
-The application should now be running at `http://localhost:8000`.
+The application should now be running at `http://localhost:3000`.
 
 ### Running with Docker
 
@@ -117,10 +117,10 @@ docker build -t order-management-system .
 2. Run the Docker container:
 
 ```
-docker run -p 8000:8000 order-management-system
+docker run -p 3000:8000 order-management-system
 ```
 
-The application should now be running at `http://localhost:8000`.
+The application should now be running at `http://localhost:3000`.
 
 ### Running with Kubernetes
 
@@ -179,10 +179,10 @@ docker build -t order-management-system .
 2. Run the Docker container:
 
 ```
-docker run -p 8000:8000 order-management-system
+docker run -p 3000:8000 order-management-system
 ```
 
-The application should now be accessible at `http://localhost:8000`.
+The application should now be accessible at `http://localhost:3000`.
 
 ### Kubernetes
 
