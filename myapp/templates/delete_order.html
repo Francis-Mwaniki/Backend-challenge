@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Order</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 3px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-danger {
+            background-color: #dc3545;
+        }
+
+        .btn:hover {
+            background-color: #555;
+        }
+
+        .btn-danger:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Delete Order</h2>
+        <p>Are you sure you want to delete the order for "{{ order.item }}" with an amount of ${{ order.amount }}?</p>
+        <form method="post">
+            {% csrf_token %}
+            <a href="/" class="btn">Cancel</a>
+            <button type="submit" class="btn btn-danger">Delete</button>
+        </form>
+    </div>
+</body>
+</html>
