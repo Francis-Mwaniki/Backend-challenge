@@ -5,7 +5,7 @@ The Order Management System is a Django-based web application that allows users 
 # What i covered
 
 - Containerized using Docker and orchestrated using Kubernetes
-- Deployed to Aptible (IAAS) at [app-73154.on-aptible.com](http://app-73154.on-aptible.com)
+- Deployed to Aptible (IAAS) at [app-73154.on-aptible.com](https://app-73154.on-aptible.com)
 - Used Django Test Framework for testing
 - Implemented Auth0 via OpenID Connect
 - Integrated AfricasTalking API for sending SMS notifications
