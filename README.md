@@ -45,7 +45,7 @@ The Order Management System is a Django-based web application that allows users 
 - Create new orders with customer details, item, and amount
 - View order details
 - Delete existing orders
-- Send SMS notifications to customers upon order creation using the AfricasTalking API
+- Send SMS notifications to customers upon order creation using the AfricasTalking API.
 
 ## Prerequisites
 
