@@ -34,6 +34,7 @@ The Order Management System is a Django-based web application that allows users 
 <p align="center">
     <img src="./public/delete.png" alt="Order Deletion" width="600">
 </p>
+
 ## Table of Contents
 
 - [Features](#features)
