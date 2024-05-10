@@ -108,6 +108,13 @@ The application should now be running at `http://localhost:3000`.
 
 ### Running with Docker
 
+<!-- deployed docker image franc254/order-mgt-system:latest -->
+### Pulling the image from docker hub
+```
+docker pull franc254/order-mgt-system:latest
+```
+To run the application using Docker, follow these steps:
+
 1. Build the Docker image:
 
 ```

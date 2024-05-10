@@ -4,3 +4,7 @@ python-dotenv ~= 1.0
 requests 
 urllib3
 africastalking 
+django-environ
+dj-database-url
+psycopg2-binary
+python-decouple
