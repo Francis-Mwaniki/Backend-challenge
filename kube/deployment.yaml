@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: order-management-app
-        image: your-dockerhub-username/order-management-system:latest
+        image: franc254/order-mgt-system:latest
         ports:
         - containerPort: 3000
         envFrom:
