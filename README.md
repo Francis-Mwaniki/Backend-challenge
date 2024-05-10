@@ -2,6 +2,17 @@
 
 The Order Management System is a Django-based web application that allows users to create, view, and delete orders. It also includes functionality to send SMS notifications to customers when an order is created, using the AfricasTalking API. The application is designed to be containerized with Docker and can be deployed using Kubernetes.
 
+# What i covered
+
+- Containerized using Docker and orchestrated using Kubernetes
+- Deployed to Aptible (IAAS) at [app-73154.on-aptible.com](http://app-73154.on-aptible.com)
+- Used Django Test Framework for testing
+- Implemented Auth0 via OpenID Connect
+- Integrated AfricasTalking API for sending SMS notifications
+- Created a CI/CD pipeline using GitHub Actions
+-Docker image is available on Docker Hub at [franc254/order-mgt-system:latest](https://hub.docker.com/repository/docker/franc254/order-mgt-system)
+
+
 # Demo
  <h2>Home Page</h2>
 <p align="center">
